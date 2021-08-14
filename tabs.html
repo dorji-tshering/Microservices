@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./tabs.css">
+        <script type="text/javascript" src="tabs.js"></script>
+
+       
+
+</head>
+<body onresize="onresize()">
+        <div class="desktop-menu">
+                <div class="desktop-tabs">
+                        <button class="tablinks" onclick="openTab(event, 'main-subjects')" id="defaultOpen">
+                                Main Subjects
+                        </button>
+                        <button class="tablinks" onclick="openTab(event, 'regional-office')">
+                                Regional Offices
+                        </button>
+                        <button class="tablinks" onclick="openTab(event, 'taxtypes')">
+                                Taxtypes
+                        </button>
+                        <button class="tablinks" onclick="openTab(event, 'tutorials')">
+                                Tutorials
+                        </button>
+                </div>
+
+                
+                <div id="main-subjects" class="tabcontent">
+                        <a href="">link1</a>
+                        <a href="">link1</a>
+                        <a href="">link1</a>
+                        <a href="">link1</a>
+                        <a href="">link1</a>
+                        <a href="">link1</a>
+                        <a href="">link1</a>
+                        <a href="">link1</a>
+                </div>
+                <div id="regional-office" class="tabcontent">
+                        <a href="">link2</a>
+                        <a href="">link2</a>
+                        <a href="">link2</a>
+                        <a href="">link2</a>
+                        <a href="">link2</a>
+                        <a href="">link2</a>
+                        <a href="">link2</a>
+                        <a href="">link2</a>
+                </div>
+                <div id="taxtypes" class="tabcontent">
+                        <a href="">link3</a>
+                        <a href="">link3</a>
+                        <a href="">link3</a>
+                        <a href="">link3</a>
+                        <a href="">link3</a>
+                        <a href="">link3</a>
+                        <a href="">link3</a>
+                        <a href="">link3</a>
+                </div>
+                <div id="tutorials" class="tabcontent">
+                        <a href="">link4</a>
+                        <a href="">link4</a>
+                        <a href="">link4</a>
+                        <a href="">link4</a>
+                        <a href="">link4</a>
+                        <a href="">link4</a>
+                        <a href="">link4</a>
+                        <a href="">link4</a>
+                </div>
+                <img alt="" src="./right-arrow.png" class="more">
+        </div>
+
+        <div class="mobile-menu">
+                <div class="mobile-tabs">
+                        <div class="tablinks">
+                                <span class="link-header">Main Subjects</span>
+                                <span class="dropdown" onclick="openMobileTab(event, 'm-main-subjects')">🠿</span>
+                        </div>
+                        <div id="m-main-subjects" class="m-tabcontent">
+                                <a href="">link1</a>
+                                <a href="">link1</a>
+                                <a href="">link1</a>
+                                <a href="">link1</a>
+                                <a href="">link1</a>
+                                <a href="">link1</a>
+                                <a href="">link1</a>
+                                <a href="">link1</a>
+                        </div>
+                        <div class="tablinks">
+                                <span class="link-header">Regional Offices</span>
+                                <span class="dropdown" onclick="openMobileTab(event, 'm-regional-office')">🠿</span>
+                        </div>
+                        <div id="m-regional-office" class="m-tabcontent">
+                                <a href="">link2</a>
+                                <a href="">link2</a>
+                                <a href="">link2</a>
+                                <a href="">link2</a>
+                                <a href="">link2</a>
+                                <a href="">link2</a>
+                                <a href="">link2</a>
+                                <a href="">link2</a>
+                        </div>
+                        <div class="tablinks">
+                                <span class="link-header">Taxtypes</span>
+                                <span class="dropdown" onclick="openMobileTab(event, 'm-taxtypes')">🠿</span>
+                        </div>
+                        <div id="m-taxtypes" class="m-tabcontent">
+                                <a href="">link3</a>
+                                <a href="">link3</a>
+                                <a href="">link3</a>
+                                <a href="">link3</a>
+                                <a href="">link3</a>
+                                <a href="">link3</a>
+                                <a href="">link3</a>
+                                <a href="">link3</a>
+                        </div>
+                        <div class="tablinks">
+                                <span class="link-header">Tutorials</span>
+                                <span class="dropdown" onclick="openMobileTab(event, 'm-tutorials')">🠿</span>
+                        </div>
+                        <div id="m-tutorials" class="m-tabcontent">
+                                <a href="">link4</a>
+                                <a href="">link4</a>
+                                <a href="">link4</a>
+                                <a href="">link4</a>
+                                <a href="">link4</a>
+                                <a href="">link4</a>
+                                <a href="">link4</a>
+                                <a href="">link4</a>
+                        </div>
+                </div>
+        </div>
+
+
+        <script>
+                 // check the window width to trigger default tab open for width above 700px on refreshing
+                if(!window.matchMedia("(max-width: 700px)").matches) {
+                        document.getElementById("defaultOpen").click();
+                }
+
+                // hide all m-tabcontent on initial rendering
+                let tabContent = document.getElementsByClassName("m-tabcontent");
+
+                for(let i=0; i<tabContent.length; i++) {
+                        tabContent[i].style.display = "none";
+                }
+        </script>
+
+</body>
+</html>

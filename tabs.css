@@ -1,0 +1,145 @@
+body {
+        padding-top: 100px;
+}
+
+.desktop-menu {
+        background-color: #EEF3F3;
+}
+
+
+/* desktop styles */
+.mobile-menu {
+        display: none;
+}
+
+.desktop-tabs {
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+}
+
+button.tablinks {
+        outline: none;
+        border: none;
+        flex: 25%;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #388E98;
+        border-right: 1px solid white;
+        color: white;
+
+}
+
+.tablinks:hover {
+        background-color: #125961;
+        transition: 1s;
+}
+
+.desktop-tabs .active {
+        background-color: #EEF3F3;
+        border: none;
+        transition: 1s;
+        color: #388E98;
+}
+
+
+
+/* tabcontent styles */
+.tabcontent {
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 10px;
+        padding: 10px 0 10px 0;
+}
+
+.tabcontent a {
+        padding: 10px;
+        display: inline-block;
+        text-align: center;
+        border-left: 2px solid #388E98;
+        text-decoration: none;
+        color: #388E98;
+}
+
+.tabcontent a:nth-child(1), .tabcontent a:nth-child(5) {
+        border: none;
+}
+
+.tabcontent a:hover {
+        background-color: white;
+        transition: 0.5s;
+}
+
+.more {
+        width: 3vw;
+        position: relative;
+        left: 90%;
+}
+
+
+
+
+/* responsive media queries */
+@media screen and (max-width: 700px) {
+        .desktop-menu {
+                display: none;
+        }
+
+        .mobile-menu {
+                display: block;
+        }
+
+        span.dropdown {
+                cursor: pointer;
+                font-size: 24px;
+        }
+
+        .link-header {
+                margin-top: 7px;
+        }
+
+        .mobile-tabs .tablinks {
+                display: flex;
+                flex-direction: row;
+                background-color: #388E98;
+                padding: 5px;
+                justify-content: space-between;
+                color: white;
+        }
+
+        .m-tabcontent {
+                grid-template-columns: repeat(4, 1fr);
+                row-gap: 10px;
+                padding: 10px 0 10px 0;
+                transition: 1s;
+        }
+
+        .m-tabcontent a {
+                padding: 10px;
+                display: inline-block;
+                text-align: center;
+                border-left: 2px solid #388E98;
+                text-decoration: none;
+                color: #388E98;
+        }
+        
+        .m-tabcontent a:nth-child(1), .m-tabcontent a:nth-child(5) {
+                border: none;
+        }
+
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
