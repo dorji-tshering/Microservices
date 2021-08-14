@@ -50,15 +50,6 @@ function openMobileTab(evt, tabName) {
         evt.currentTarget.textContent = "🠽";       
 }
 
-// scripts to run on document resize
-function onresize() {
-
-        // default open tab in desktop
-        if(!window.matchMedia("(max-width: 700px)").matches) {
-                document.getElementById("defaultOpen").click();
-        }
-}
-
 
 
 
